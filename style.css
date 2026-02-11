@@ -47,7 +47,8 @@
     .runner {
         position: absolute;
         bottom: 180px;
-        background-color: #c4452f;
+        background-image: url('Said\ work.svg');
+        background-size: 150%;
         box-shadow: #333 0px 0px 0px 4px inset;
         left: 150px;
         width: 60px;
