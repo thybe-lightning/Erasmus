@@ -3,7 +3,7 @@ let runnerBottom = 80;
 let isJumping = false;
 let velocityY = 0;
 const gravity = 0.6;
-const jumpPower = 15;
+const jumpPower = 20;
 const groundLevel = 160;
 
 const runner = document.querySelector('.runner');
