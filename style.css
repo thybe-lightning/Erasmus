@@ -30,7 +30,7 @@
         );
         opacity: 0.8;
         /* animated stripe movement; paused by default, started from JS */
-        animation: laneMove 4s linear infinite;
+        animation: laneMove 0.5s linear infinite;
         animation-play-state: paused;
     }
 
