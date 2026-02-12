@@ -15,6 +15,10 @@ document.addEventListener('keydown', (e) => {
     isJumping = true;
     velocityY = jumpPower;
   }
+  if (e.code === 'Enter') {
+    isJumping = true;
+    velocityY = jumpPower;
+  }
 });
 
 function gameLoop() {
