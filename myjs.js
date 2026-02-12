@@ -1,5 +1,3 @@
-
-
 const hurdles = [];
 let speed = 10;          // Startgeschwindigkeit
 let score = 0;          // Score
@@ -47,7 +45,21 @@ function checkCollision() {
     for (let i = 0; i < hurdles.length; i++) {
         const h = hurdles[i];
         const hRect = h.getBoundingClientRect();
-        if (rectsOverlap(rRect, hRect)) {
+        
+        // Adjust hitbox to match original unscaled size (40px × 60px before 225% scale)
+        const originalWidth = 40;
+        const originalHeight = 60;
+        const widthReduction = (hRect.width - originalWidth) / 2;
+        const heightReduction = (hRect.height - originalHeight) / 2;
+        
+        const adjustedHRect = {
+            left: hRect.left + widthReduction,
+            right: hRect.right - widthReduction,
+            top: hRect.top + heightReduction,
+            bottom: hRect.bottom - heightReduction
+        };
+        
+        if (rectsOverlap(rRect, adjustedHRect)) {
             stopGame();
             return;
         }
